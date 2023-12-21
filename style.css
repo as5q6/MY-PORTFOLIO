@@ -3,6 +3,27 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
 
 
+/* General dark mode styles */
+.dark-mode {
+  background-color: #121212; /* Dark background */
+  color: #ffffff; /* Light text */
+}
+.dark-mode .icon {
+  color: #ffffff; /* Change the color of the logo in dark mode */
+}
+
+/* Specific dark mode styles for different elements */
+.dark-mode .nav-links a,
+.dark-mode .section__text,
+.dark-mode .section__text__p1,
+.dark-mode .section__text__p2,
+.dark-mode .download_cv,
+.dark-mode .text-container p,
+.dark-mode .Copyright p,
+.dark-mode .contact-info-container p a {
+  color: #ffffff; /* Change the color of the text in dark mode */
+}
+/* Other elements like buttons, links, etc., also need dark mode styles */
 
 * {
   margin: 0;
