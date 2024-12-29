@@ -14,4 +14,30 @@ declare global {
   interface Window {
     lottie: any;
   }
+}
+
+interface SectionHeadingProps {
+  title: string;
+  subtitle?: string;
+}
+
+interface SkillProps {
+  name: string;
+  level: number;
+}
+
+interface ExperienceProps {
+  title: string;
+  company: string;
+  duration: string;
+  description: string[];
+}
+
+interface ProjectProps {
+  title: string;
+  description: string;
+  technologies: string[];
+  imageUrl: string;
+  projectUrl: string;
+  githubUrl?: string;
 } 

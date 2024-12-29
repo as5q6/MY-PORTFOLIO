@@ -93,12 +93,12 @@ export default function About() {
                   </div>
                   <div>
                     <h3 className="text-xl font-bold text-gray-900">Education</h3>
-                    <p className="text-gray-600">Master's Degree</p>
+                    <p className="text-gray-600">Master&apos;s Degree</p>
                   </div>
                 </div>
                 <p className="text-gray-600">
-                  B.Sc. Bachelors Degree<br />
-                  M.Sc. Masters Degree
+                  B.Sc. Bachelor&apos;s Degree<br />
+                  M.Sc. Master&apos;s Degree
                 </p>
               </motion.div>
             </div>

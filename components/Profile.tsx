@@ -16,7 +16,7 @@ export default function Profile() {
             transition={{ duration: 0.5 }}
           >
             <div className="space-y-2">
-              <h2 className="text-gray-600 text-lg font-medium">Hello, I'm</h2>
+              <h2 className="text-gray-600 text-lg font-medium">Hello, I&apos;m</h2>
               <h1 className="text-5xl md:text-6xl font-bold text-gray-900">
                 Shaik Afrid Ali
               </h1>
