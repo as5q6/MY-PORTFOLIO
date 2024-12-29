@@ -10,7 +10,7 @@ export const links = {
     nav: {
         about: "#about",
         experience: "#experience",
-        projects: "#projects",
+        articles: "#articles",
         contact: "#contact",
     },
 

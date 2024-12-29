@@ -29,7 +29,7 @@ export default function Navbar() {
                             <Link href={links.nav.experience}>Experience</Link>
                         </li>
                         <li>
-                            <Link href={links.nav.projects}>Projects</Link>
+                            <Link href={links.nav.articles}>Technical Articles</Link>
                         </li>
                         <li>
                             <Link href={links.nav.contact}>Contact</Link>
@@ -64,8 +64,8 @@ export default function Navbar() {
                             <Link href={links.nav.experience} onClick={toggleMenu}>
                                 Experience
                             </Link>
-                            <Link href={links.nav.projects} onClick={toggleMenu}>
-                                Projects
+                            <Link href={links.nav.articles} onClick={toggleMenu}>
+                                Articles
                             </Link>
                             <Link href={links.nav.contact} onClick={toggleMenu}>
                                 Contact
