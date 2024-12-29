@@ -8,7 +8,13 @@
     "start": "next start",
     "lint": "next lint",
     "clean": "rm -rf node_modules .next package-lock.json",
-    "fresh-install": "npm run clean && npm install"
+    "fresh-install": "npm run clean && npm install",
+    "type-check": "tsc --noEmit",
+    "precommit": "npm run lint && npm run type-check",
+    "check-all": "npm run lint && npm run type-check && npm run build",
+    "analyze": "ANALYZE=true next build",
+    "check-deps": "npx npm-check-updates",
+    "validate": "npm run lint && npm run type-check && npm run build && npm run check-deps"
   },
   "dependencies": {
     "@dotlottie/react-player": "^1.6.19",

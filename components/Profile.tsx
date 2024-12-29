@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Image from 'next/image';
+import { links } from '@/config/links';
 
 export default function Profile() {
   return (
@@ -30,26 +31,18 @@ export default function Profile() {
               Specializing in full-stack development with React, Node.js, and cloud solutions.
             </p>
 
-            <div className="flex gap-4 justify-center md:justify-start">
+            <div className="flex justify-center md:justify-start">
               <Link
-                href="#contact"
+                href={links.nav.contact}
                 className="btn btn-primary"
               >
                 Contact Me
               </Link>
-              <a
-                href="/assets/Shaik Afrid Ali FS.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn btn-secondary"
-              >
-                Download CV
-              </a>
             </div>
 
             <div className="flex gap-6 justify-center md:justify-start pt-4">
               <motion.a
-                href="https://github.com/AfridShaik"
+                href={links.social.github}
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.1 }}
@@ -64,7 +57,7 @@ export default function Profile() {
                 />
               </motion.a>
               <motion.a
-                href="https://linkedin.com/in/afridali"
+                href={links.social.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.1 }}

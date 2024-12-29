@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
+import { links } from '@/config/links';
 
 export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
@@ -22,16 +23,16 @@ export default function Navbar() {
                     {/* Desktop Navigation */}
                     <ul className="nav-links">
                         <li>
-                            <Link href="#about">About</Link>
+                            <Link href={links.nav.about}>About</Link>
                         </li>
                         <li>
-                            <Link href="#experience">Experience</Link>
+                            <Link href={links.nav.experience}>Experience</Link>
                         </li>
                         <li>
-                            <Link href="#projects">Projects</Link>
+                            <Link href={links.nav.projects}>Projects</Link>
                         </li>
                         <li>
-                            <Link href="#contact">Contact</Link>
+                            <Link href={links.nav.contact}>Contact</Link>
                         </li>
                     </ul>
 
@@ -57,16 +58,16 @@ export default function Navbar() {
                         transition={{ type: 'tween', duration: 0.3 }}
                     >
                         <nav className="mobile-nav-links">
-                            <Link href="#about" onClick={toggleMenu}>
+                            <Link href={links.nav.about} onClick={toggleMenu}>
                                 About
                             </Link>
-                            <Link href="#experience" onClick={toggleMenu}>
+                            <Link href={links.nav.experience} onClick={toggleMenu}>
                                 Experience
                             </Link>
-                            <Link href="#projects" onClick={toggleMenu}>
+                            <Link href={links.nav.projects} onClick={toggleMenu}>
                                 Projects
                             </Link>
-                            <Link href="#contact" onClick={toggleMenu}>
+                            <Link href={links.nav.contact} onClick={toggleMenu}>
                                 Contact
                             </Link>
                         </nav>
