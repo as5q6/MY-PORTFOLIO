@@ -5,6 +5,10 @@
 
 # testing
 /coverage
+.lighthouseci/
+lighthouse-*.json
+lighthouse-*.html
+*.report.html
 
 # next.js
 /.next/
@@ -24,6 +28,7 @@ Thumbs.db
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+lighthouse-debug.log*
 
 # local env files
 .env*.local
@@ -55,3 +60,8 @@ next-env.d.ts
 *.tmp
 *.temp
 *.log
+
+# test reports
+/reports
+/test-results
+*.report.*
