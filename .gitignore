@@ -9,21 +9,16 @@
 # next.js
 /.next/
 /out/
-.next
-next-env.d.ts
+/build
+.next-env.d.ts
 
 # production
 /build
-/dist
 
 # misc
 .DS_Store
 *.pem
-.env
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
+Thumbs.db
 
 # debug
 npm-debug.log*
@@ -32,53 +27,31 @@ yarn-error.log*
 
 # local env files
 .env*.local
+.env
 
 # vercel
 .vercel
 
 # typescript
 *.tsbuildinfo
+next-env.d.ts
 
-# IDE / Editor specific
-.idea/
-.vscode/
+# IDE
+.idea
+.vscode
 *.swp
 *.swo
-*~
 
-# OS generated files
-.DS_Store
-.DS_Store?
-._*
-.Spotlight-V100
-.Trashes
-ehthumbs.db
-Thumbs.db
+# cache
+.cache
+.npm
+.eslintcache
+.stylelintcache
 
-# Temporary files
+# build artifacts
+.turbo
+
+# temporary files
 *.tmp
 *.temp
-.cache/
 *.log
-
-# Build artifacts
-.turbo
-.eslintcache
-.stylelintcache
-.next/cache/
-
-# Optional npm cache directory
-.npm
-
-# Optional eslint cache
-.eslintcache
-
-# Optional stylelint cache
-.stylelintcache
-
-# dotenv environment variable files
-.env
-.env.development.local
-.env.test.local
-.env.production.local
-.env.local
