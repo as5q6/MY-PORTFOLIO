@@ -51,3 +51,63 @@ document.addEventListener('DOMContentLoaded', function() {
         path: 'https://lottie.host/14daa51d-0d2e-4e2e-89f5-ed0a37d6b86e/JHtGBQcpGj.json' // LinkedIn icon animation
     });
 });
+
+function openArticle(articleId) {
+  const modal = document.getElementById('article-modal');
+  const contentContainer = document.getElementById('modal-content-container');
+  
+  // Load article content based on articleId
+  if (articleId === 'software-architecture') {
+    contentContainer.innerHTML = `
+      <h1>Understanding Software Architecture Patterns</h1>
+      
+      <section class="article-section">
+        <h2>What is Software Architecture?</h2>
+        <p>Software architecture refers to the fundamental structures of a software system and the discipline of creating such structures and systems. Each structure comprises software elements, relations among them, and properties of both elements and relations.</p>
+      </section>
+
+      <section class="article-section">
+        <h2>Common Architecture Patterns</h2>
+        
+        <h3>1. Layered (N-tier) Architecture</h3>
+        <dotlottie-player 
+          src="https://lottie.host/2a32e31f-5443-4cc7-8154-4a1e87d052cc/BlBFcHhweY.json" 
+          background="transparent" 
+          speed="1" 
+          style="width: 200px; height: 200px" 
+          loop 
+          autoplay>
+        </dotlottie-player>
+        <p>The most common architecture pattern, known for its simplicity and separation of concerns. Components are organized in horizontal layers, each serving a specific role.</p>
+
+        <h3>2. Microservices Architecture</h3>
+        <dotlottie-player 
+          src="https://lottie.host/c517fac7-4171-4ad0-81f8-01e1bbeb8859/UrdbSILFk8.lottie" 
+          background="transparent" 
+          speed="1" 
+          style="width: 200px; height: 200px" 
+          loop 
+          autoplay>
+        </dotlottie-player>
+        <p>A collection of small, autonomous services where each service is self-contained and implements a single business capability.</p>
+
+        <!-- Add more architecture patterns as needed -->
+      </section>
+    `;
+  }
+  
+  modal.style.display = 'block';
+}
+
+function closeArticle() {
+  const modal = document.getElementById('article-modal');
+  modal.style.display = 'none';
+}
+
+// Close modal when clicking outside
+window.onclick = function(event) {
+  const modal = document.getElementById('article-modal');
+  if (event.target == modal) {
+    modal.style.display = 'none';
+  }
+}

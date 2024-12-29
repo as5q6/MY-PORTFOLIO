@@ -1,0 +1,187 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --text-primary: #111827;    /* Dark gray, almost black for main text */
+    --text-secondary: #4B5563;  /* Medium gray for secondary text */
+    --text-muted: #6B7280;     /* Lighter gray for subtle text */
+    --bg-primary: #ffffff;      /* Pure white background */
+    --bg-secondary: #F3F4F6;    /* Light gray background */
+    --accent: #2563EB;         /* Blue accent for highlights */
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+  }
+
+  body {
+    @apply bg-white text-gray-900 font-sans;
+    line-height: 1.6;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply text-gray-900 font-bold tracking-tight;
+  }
+
+  p {
+    @apply text-gray-600 leading-relaxed;
+  }
+
+  section {
+    @apply py-20 px-4 sm:px-6 lg:px-8 w-full;
+    background: var(--bg-primary);
+  }
+
+  .container {
+    @apply max-w-7xl mx-auto;
+  }
+}
+
+@layer components {
+  /* Navigation Styles */
+  .nav-container {
+    @apply fixed top-0 left-0 right-0 z-50 bg-white border-b border-gray-200;
+  }
+
+  .nav-content {
+    @apply container mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between;
+  }
+
+  .nav-links {
+    @apply hidden md:flex space-x-8;
+  }
+
+  .nav-links a {
+    @apply text-gray-600 hover:text-gray-900 font-medium transition-colors duration-200;
+  }
+
+  .logo {
+    @apply text-xl font-bold text-gray-900;
+  }
+
+  /* Hero Section */
+  .hero-section {
+    @apply pt-32 pb-20 bg-gradient-to-b from-gray-50 to-white;
+  }
+
+  .hero-content {
+    @apply max-w-4xl mx-auto text-center;
+  }
+
+  .hero-title {
+    @apply text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6;
+  }
+
+  .hero-subtitle {
+    @apply text-xl text-gray-600 mb-8 max-w-2xl mx-auto;
+  }
+
+  /* About Section */
+  .about-section {
+    @apply py-20 bg-white;
+  }
+
+  .about-grid {
+    @apply grid md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto;
+  }
+
+  .about-image {
+    @apply rounded-2xl shadow-lg overflow-hidden;
+  }
+
+  .about-content {
+    @apply space-y-6;
+  }
+
+  .section-title {
+    @apply text-3xl sm:text-4xl font-bold text-gray-900 mb-4;
+  }
+
+  .section-subtitle {
+    @apply text-lg text-gray-600 mb-8;
+  }
+
+  /* Experience Cards */
+  .experience-grid {
+    @apply grid md:grid-cols-2 gap-8 max-w-6xl mx-auto;
+  }
+
+  .experience-card {
+    @apply bg-white rounded-xl p-6 shadow-sm border border-gray-200 hover:shadow-md transition-shadow duration-200;
+  }
+
+  .experience-title {
+    @apply text-xl font-semibold text-gray-900 mb-2;
+  }
+
+  .experience-subtitle {
+    @apply text-gray-600 mb-4;
+  }
+
+  /* Skill Tags */
+  .skill-tag {
+    @apply inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-gray-100 text-gray-800 mr-2 mb-2;
+  }
+
+  /* Buttons */
+  .btn {
+    @apply inline-flex items-center justify-center px-6 py-3 rounded-lg font-medium transition-all duration-200;
+  }
+
+  .btn-primary {
+    @apply bg-gray-900 text-white hover:bg-gray-800 shadow-sm hover:shadow;
+  }
+
+  .btn-secondary {
+    @apply bg-white text-gray-900 border border-gray-300 hover:bg-gray-50;
+  }
+
+  /* Contact Section */
+  .contact-section {
+    @apply bg-gray-50;
+  }
+
+  .contact-container {
+    @apply max-w-4xl mx-auto;
+  }
+
+  .contact-card {
+    @apply bg-white rounded-xl shadow-sm border border-gray-200 p-6;
+  }
+
+  .contact-info {
+    @apply flex items-center space-x-3 text-gray-600 mb-4;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  section {
+    @apply py-16;
+  }
+
+  .hero-title {
+    @apply text-3xl sm:text-4xl;
+  }
+
+  .section-title {
+    @apply text-2xl sm:text-3xl;
+  }
+
+  .about-grid {
+    @apply grid-cols-1;
+  }
+
+  .experience-grid {
+    @apply grid-cols-1;
+  }
+} 
