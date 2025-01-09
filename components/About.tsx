@@ -94,13 +94,10 @@ export default function About() {
               transition={{ delay: 0.5 }}
             >
               <p className="text-lg leading-relaxed">
-                I am a passionate Software Developer with over 5 years of experience in building robust web applications.
-                My expertise spans across modern frameworks and technologies including Angular, React, Node.js, and Spring Boot.
+                As a Senior Software Engineer with 5+ years of experience, I've delivered mission-critical solutions across Banking, Healthcare, and Energy sectors. My technical expertise encompasses the full modern web stack - from React/Next.js and Angular for responsive frontends, to Node.js, Spring Boot, and Python for robust backend services. I'm proficient in cloud platforms (AWS, Azure) and have extensive experience with containerization (Docker, Kubernetes) and CI/CD practices.
               </p>
               <p className="text-lg leading-relaxed">
-                I specialize in developing high-quality front-end experiences while also designing and implementing scalable
-                back-end services and databases. My focus is on creating efficient, maintainable, and user-friendly solutions
-                that solve real-world problems.
+                What sets me apart is my proven track record of driving technical innovation while delivering business value. At Deutsche Bank, I optimized trading platforms; at Ameren, I'm modernizing energy infrastructure; and in healthcare, I've built HIPAA-compliant applications. I bring expertise in microservices architecture, distributed systems, and both SQL (PostgreSQL) and NoSQL (MongoDB) databases. I'm passionate about clean code, performance optimization, and implementing best practices in security and scalability.
               </p>
             </motion.div>
           </div>

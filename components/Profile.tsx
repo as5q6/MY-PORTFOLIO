@@ -27,8 +27,9 @@ export default function Profile() {
             </div>
 
             <p className="text-gray-600 text-lg max-w-xl">
-              Passionate about crafting exceptional web experiences with modern technologies.
-              Specializing in full-stack development with React, Node.js, and cloud solutions.
+              Full-stack architect driving enterprise solutions with measurable impact. Optimized trading
+              platforms reducing latency by 45%, modernized energy infrastructure serving 2.4M+ customers,
+              and scaled cloud systems handling 1M+ daily transactions. Expertise in modern tech stack.
             </p>
 
             <div className="flex justify-center md:justify-start">
