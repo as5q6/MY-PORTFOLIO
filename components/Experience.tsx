@@ -11,8 +11,18 @@ const skills = {
     { name: "Spring Boot", level: "Advanced", icon: "🍃" },
     { name: "AWS", level: "Advanced", icon: "☁️" },
     { name: "Azure", level: "Advanced", icon: "🌥️" },
-    { name: "MongoDB", level: "Advanced", icon: "🍃" },
-    { name: "PostgreSQL", level: "Advanced", icon: "🐘" }
+    { name: "MongoDB", level: "Advanced", icon: "🗄️" },
+    { name: "PostgreSQL", level: "Advanced", icon: "🐘" },
+    { name: "Python", level: "Advanced", icon: "🐍" },
+    { name: "Flask", level: "Advanced", icon: "🌶️" },
+    { name: "Django", level: "Advanced", icon: "🎯" },
+    { name: "Docker", level: "Advanced", icon: "🐋" },
+    { name: "Kubernetes", level: "Advanced", icon: "⚓" },
+    { name: "Git", level: "Advanced", icon: "🔄" },
+    { name: "CI/CD", level: "Advanced", icon: "⚙️" },
+    { name: "Jenkins", level: "Advanced", icon: "🔧" },
+    { name: "Github Actions", level: "Advanced", icon: "🔨" },
+
   ],
   domains: [
     { name: "Banking & Finance", icon: "💰", years: "3+" },
