@@ -29,6 +29,230 @@ interface Article {
 
 const articles: Article[] = [
   {
+    id: 7,
+    title: "Java Performance Optimization Mastery 🚀",
+    summary: "Advanced JVM tuning, memory management, and profiling techniques",
+    readTime: "18 min read",
+    date: "2024-02-20",
+    category: "Backend",
+    content: {
+      introduction: "Stop guessing why your Java app is slow! Here's your ultimate guide to squeezing every ounce of performance from the JVM. From memory leaks to garbage collection tuning, we've got you covered. 🎯",
+      sections: [
+        {
+          title: "JVM Performance Optimization 🛠️",
+          content: `• Memory Management Mastery 🧠
+      - Heap Size Optimization:
+        Xmx = container_memory * 0.75 (Leave room for native memory)
+        Xms = Xmx (Avoid memory growth overhead)
+        Pro tip: Don't let your Docker container kill your JVM!
+  
+      - Garbage Collection Tuning:
+        ✅ G1GC for general use: -XX:+UseG1GC
+        ✅ ZGC for low latency: -XX:+UseZGC
+        ❌ ParallelGC (unless you really know what you're doing)
+        Key flags: -XX:MaxGCPauseMillis=200 -XX:G1HeapRegionSize=16M
+  
+      - Memory Leak Prevention:
+        - ThreadLocal cleanup in thread pools
+        - WeakHashMap for caches
+        - Regular heap dumps analysis
+        - JFR continuous monitoring
+  
+  • Application Profiling 📊
+      - Async Profiler Setup:
+        - CPU sampling: 999Hz
+        - Allocation profiling
+        - Lock contention analysis
+        - Flame graphs generation
+  
+      - JFR (Java Flight Recorder):
+        - Continuous recording with 1% overhead
+        - Custom events for business metrics
+        - GC analysis with JDK Mission Control
+        - Thread dumps on high CPU
+  
+  • Code Optimization Techniques 💡
+      - String Operations:
+        StringBuilder for loops (5x faster)
+        String.format() alternatives
+        Intern strings for memory (carefully!)
+  
+      - Collections Usage:
+        ArrayList vs LinkedList (know your access patterns)
+        HashMap load factor tuning
+        ConcurrentHashMap for thread safety
+  
+      - Stream API Optimization:
+        Parallel streams (when it makes sense)
+        Custom ForkJoinPool for parallel operations
+        Avoid boxing/unboxing in streams
+  
+  • Database Interaction ⚡
+      - Connection Pool Tuning:
+        minimumIdle=10
+        maximumPoolSize=50
+        keepaliveTime=60000
+  
+      - Batch Operations:
+        JDBC batch size = 1000
+        Entity graph optimization
+        Lazy loading strategy`,
+          keyPoints: [
+            "JVM tuning improves throughput by 40%",
+            "Memory leaks eliminated with proper WeakRef usage",
+            "Profiling identifies bottlenecks in minutes",
+            "Connection pool optimization reduces latency by 50%"
+          ]
+        }
+      ],
+      conclusion: "Performance optimization is an art: Measure, tune, verify. Your Java app can handle 2x the load with proper optimization! 🚀"
+    },
+    gif: "https://i.imgur.com/Kv9ichJ.gif"
+  },
+  {
+    id: 8,
+    title: "Spring Boot Production Hardening 🛡️",
+    summary: "Enterprise-grade Spring Boot deployment strategies and security",
+    readTime: "16 min read",
+    date: "2024-02-25",
+    category: "Backend",
+    content: {
+      introduction: "Deploy Spring Boot apps that survive production chaos! From security hardening to resilience patterns, here's what actually works in high-stakes environments. 🎯",
+      sections: [
+        {
+          title: "Production Readiness Checklist ✅",
+          content: `• Security Hardening 🔒
+      - Spring Security Configuration:
+        @EnableWebSecurity with custom DSL
+        OAuth2/JWT with public key rotation
+        Rate limiting per endpoint
+        CORS with specific origins
+  
+      - Secrets Management:
+        AWS Secrets Manager integration
+        Vault for dynamic secrets
+        Environment-specific encryption
+        Key rotation automation
+  
+  • Resilience Patterns 💪
+      - Circuit Breaker Implementation:
+        Resilience4j with custom configs
+        Fallback strategies
+        Bulkhead pattern
+        Rate limiter integration
+  
+      - Caching Strategy:
+        Caffeine L1 + Redis L2
+        Cache-aside pattern
+        TTL-based invalidation
+        Hot key protection
+  
+  • Observability Setup 👀
+      - Metrics Collection:
+        Micrometer + Prometheus
+        Custom business metrics
+        SLO monitoring
+        Alert correlation
+  
+      - Distributed Tracing:
+        OpenTelemetry integration
+        Span customization
+        Baggage propagation
+        Sampling strategies
+  
+  • Performance Optimization 🚀
+      - Async Operations:
+        @Async with custom Executor
+        CompletableFuture chaining
+        WebClient over RestTemplate
+        Reactive endpoints when needed`,
+          keyPoints: [
+            "Security-first design prevents breaches",
+            "Resilience patterns ensure 99.99% uptime",
+            "Observability catches issues early",
+            "Async processing improves throughput by 3x"
+          ]
+        }
+      ],
+      conclusion: "Production-ready means secure, observable, and resilient. Your Spring Boot app is now ready for battle! 💪"
+    },
+    gif: "https://miro.medium.com/v2/resize:fit:1400/format:webp/1*g0htFSEnplHtdXYcZG3qZQ.gif"
+  },
+  {
+    id: 9,
+    title: "AWS Cost Optimization for Java Apps 💰",
+    summary: "Save 50%+ on AWS bills while maintaining performance",
+    readTime: "14 min read",
+    date: "2024-03-01",
+    category: "Cloud",
+    content: {
+      introduction: "Stop wasting money on AWS! Here's how to optimize your Java applications for maximum cost efficiency without sacrificing performance. Real strategies that saved real money. 💸",
+      sections: [
+        {
+          title: "AWS Cost Optimization Strategies 📊",
+          content: `• Infrastructure Right-Sizing 📏
+      - EC2 Instance Selection:
+        t3.large → t4g.medium (40% cheaper)
+        Graviton2 for Java workloads
+        Spot instances for batch jobs
+        Reserved instances strategy
+  
+      - Container Optimization:
+        ECS Capacity Provider
+        Fargate Spot usage
+        Multi-tenant pod packing
+        Resource utilization > 80%
+  
+  • Storage Cost Reduction 💾
+      - S3 Lifecycle Rules:
+        IA after 30 days
+        Glacier after 90 days
+        Object expiration policies
+        Intelligent-Tiering for unknown patterns
+  
+      - EBS Optimization:
+        gp3 over gp2 (20% savings)
+        Right-sized volumes
+        Snapshot management
+        IOPS optimization
+  
+  • Network Cost Control 🌐
+      - Transfer Optimization:
+        CloudFront distribution
+        S3 Transfer Acceleration
+        VPC Endpoint usage
+        Regional data transfer
+  
+      - Cache Strategy:
+        CloudFront caching
+        API Gateway cache
+        ElastiCache sizing
+        DAX for DynamoDB
+  
+  • Monitoring & Automation 🤖
+      - Cost Allocation:
+        Detailed tagging strategy
+        Cost Explorer reports
+        Budget alerts
+        Resource scheduling
+  
+      - Auto-Scaling:
+        Target tracking policies
+        Predictive scaling
+        Scale-in protection
+        Warm pools for Java apps`,
+          keyPoints: [
+            "Infrastructure optimization saves 40%",
+            "Storage strategies reduce costs by 60%",
+            "Network optimization cuts transfer costs by 50%",
+            "Automated management prevents waste"
+          ]
+        }
+      ],
+      conclusion: "Smart AWS usage means better performance at lower costs. Implement these strategies and watch your bill shrink! 📉"
+    },
+    gif: "https://techcrunch.com/wp-content/uploads/2021/12/aws-logo-glitch.gif?w=1024"
+  }, {
     id: 1,
     title: "Containerization Best Practices 🐳",
     summary: "From Zero to Hero: Docker & Kubernetes for Java apps (without the headaches)",
@@ -331,7 +555,7 @@ const articles: Article[] = [
       conclusion: "Automate everything: 10-minute pipelines, zero-downtime deployments, 95% issue detection. Monitor and improve continuously. 🔄"
     },
     gif: "https://miro.medium.com/v2/resize:fit:2000/0*UY4q3UdWxNNZHARX.gif"
-  }
+  },
 ];
 
 export default function Articles() {

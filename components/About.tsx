@@ -61,7 +61,7 @@ export default function About() {
                   </div>
                 </div>
                 <p className="text-gray-600 text-sm">
-                  Software Developer at Ameren, Synechron, Deutsche Bank, and Boehringer Ingelheim
+                  Senior Software Developer at Ameren, Synechron, Deutsche Bank, and Boehringer Ingelheim
                 </p>
               </motion.div>
 

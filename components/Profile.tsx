@@ -22,7 +22,7 @@ export default function Profile() {
                 Shaik Afrid Ali
               </h1>
               <p className="text-2xl text-gray-600 mt-4">
-                Software Developer
+                Senior Software Developer
               </p>
             </div>
 
