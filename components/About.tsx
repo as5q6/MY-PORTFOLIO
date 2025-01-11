@@ -94,10 +94,10 @@ export default function About() {
               transition={{ delay: 0.5 }}
             >
               <p className="text-lg leading-relaxed">
-                As a Senior Software Engineer with 5+ years of experience, I've delivered mission-critical solutions across Banking, Healthcare, and Energy sectors. My technical expertise encompasses the full modern web stack - from React/Next.js and Angular for responsive frontends, to Node.js, Spring Boot, and Python for robust backend services. I'm proficient in cloud platforms (AWS, Azure) and have extensive experience with containerization (Docker, Kubernetes) and CI/CD practices.
+                I am a Senior Software Engineer who builds fast and reliable web applications. At Deutsche Bank, I made trading systems 45% faster. At Ameren, I help 2.4 million customers track their energy usage through a modern web platform. I build both frontend (React, Next.js, Angular) and backend (Node.js, Spring Boot) parts of applications.
               </p>
               <p className="text-lg leading-relaxed">
-                What sets me apart is my proven track record of driving technical innovation while delivering business value. At Deutsche Bank, I optimized trading platforms; at Ameren, I'm modernizing energy infrastructure; and in healthcare, I've built HIPAA-compliant applications. I bring expertise in microservices architecture, distributed systems, and both SQL (PostgreSQL) and NoSQL (MongoDB) databases. I'm passionate about clean code, performance optimization, and implementing best practices in security and scalability.
+                I create secure healthcare apps that protect patient data. My apps can handle over 1 million users daily using AWS and Azure cloud services. I make sure all my code is clean, well-tested, and easy to update. I use tools like Docker and Kubernetes to deploy code quickly and safely.
               </p>
             </motion.div>
           </div>

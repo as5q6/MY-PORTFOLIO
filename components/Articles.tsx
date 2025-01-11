@@ -24,54 +24,78 @@ interface Article {
   date: string;
   category: string;
   content: ArticleContent;
+  gif?: string;
 }
 
 const articles: Article[] = [
   {
     id: 1,
     title: "Containerization Best Practices 🐳",
-    summary: "Docker & Kubernetes optimization techniques for Java applications",
+    summary: "From Zero to Hero: Docker & Kubernetes for Java apps (without the headaches)",
     readTime: "15 min read",
     date: "2024-01-15",
     category: "DevOps",
     content: {
-      introduction: "Let's dive into real-world containerization strategies that make your Java apps cloud-ready. Practical tips for Docker and Kubernetes that actually work in production. 🎯",
+      introduction: "Tired of hearing 'but it works on my machine'? Let's fix that forever! Here's your no-nonsense guide to containerizing Java applications that actually work in production. No fluff, just battle-tested strategies that'll make your ops team love you. 🎯",
       sections: [
         {
           title: "Docker Optimization Techniques 🛠️",
-          content: `• Java Container Optimization 📦
-    - Multi-stage builds: 200MB vs 800MB image size
-    - JVM container flags: -XX:MaxRAMPercentage=75.0 -XX:InitialRAMPercentage=50.0
-    - Base image selection: eclipse-temurin:17-jre-jammy (120MB) vs full JDK (460MB)
-    - Layer caching: 5x faster builds with proper layering
+          content: `• The Art of Slim Images 📦
+    - Multi-stage builds: Your 800MB image just became 200MB! 
+      FROM maven AS builder
+      FROM eclipse-temurin:17-jre-jammy
+      That's it - your mom would be proud of how clean this is!
 
-• Kubernetes Configuration ⚡
-    - Resource limits: requests.memory=512Mi, limits.memory=1Gi
-    - Liveness probe: initialDelaySeconds=30, periodSeconds=10
-    - Readiness setup: Spring Actuator with 2s timeout
-    - HorizontalPodAutoscaler: target CPU utilization 75%
+    - JVM Flags That Actually Matter:
+      -XX:MaxRAMPercentage=75.0 (because your container needs to breathe)
+      -XX:InitialRAMPercentage=50.0 (start strong, stay strong)
+      Pro tip: These flags are like giving your JVM a gym membership it'll actually use
 
-• Container Security 🔒
-    - Non-root user: uid=1000, gid=1000
-    - Read-only root filesystem
-    - Security context: runAsNonRoot=true
-    - Resource quotas: CPU/Memory limits per namespace
+    - Base Image Selection (Size Matters):
+      ✅ eclipse-temurin:17-jre-jammy (120MB) - The lightweight champion
+      ❌ full JDK (460MB) - The "I store everything in my garage" approach
+      Your CI/CD pipeline will thank you!
 
-• Monitoring Setup 📊
-    - Prometheus metrics: 1s scrape interval
-    - Container insights: CPU, Memory, Network stats
-    - Log aggregation: EFK stack integration
-    - Grafana dashboards: 4 golden signals monitoring`,
+• Kubernetes Configuration (The Fun Part) ⚡
+    - Resource Limits (Because Sharing is Caring):
+      requests.memory=512Mi (The minimum to keep Java happy)
+      limits.memory=1Gi (The "please don't eat the entire server" limit)
+
+    - Health Checks That Make Sense:
+      livenessProbe: initialDelaySeconds=30 (Give it time to wake up)
+      readinessProbe: Spring Actuator with 2s timeout
+      Because even containers need a coffee break sometimes!
+
+    - Autoscaling Magic:
+      HorizontalPodAutoscaler: target CPU utilization 75%
+      Like having a clone army, but for your services!
+
+• Security (The Boring but Important Stuff) 🔒
+    - Run as Non-Root (Because YOLO is not a security strategy):
+      uid=1000, gid=1000
+      securityContext.runAsNonRoot=true
+      Your security team will finally stop giving you those looks
+
+    - Resource Quotas:
+      CPU/Memory limits per namespace
+      Because good fences make good neighbors in Kubernetes
+
+• Monitoring (Know It Before It Breaks) 📊
+    - Prometheus metrics: Every second counts
+    - Container insights: Because guessing is not a monitoring strategy
+    - Log aggregation: EFK stack (Elasticsearch, Fluentd, Kibana)
+    - Grafana dashboards: Pretty graphs that actually mean something`,
           keyPoints: [
-            "Optimized images are 75% smaller and boot 3x faster",
-            "Proper K8s config achieves 85% resource utilization",
-            "Security best practices prevent 95% of container vulnerabilities",
-            "Monitoring catches 99% of issues before users do"
+            "Your Docker images are now 75% smaller (and your download speeds 100% happier)",
+            "Kubernetes configs that won't make ops teams cry",
+            "Security that actually works (tested against real-world chaos)",
+            "Monitoring that tells you problems before your users do"
           ]
         }
       ],
-      conclusion: "Focus on image size (75% reduction), resource efficiency (85% utilization), and security (95% vulnerability prevention). Monitor everything. 📈"
-    }
+      conclusion: "Remember: Small images, efficient resources, solid security, and monitor everything like a helicopter parent. Your containers are now ready for the real world! 🚀"
+    },
+    gif: "https://cdn.prod.website-files.com/6340354625974824cde2e195/65a7f6783b833c93eea544a4_Img2.gif"
   },
   {
     id: 2,
@@ -117,7 +141,8 @@ const articles: Article[] = [
         }
       ],
       conclusion: "Build APIs that scale: 10k req/s throughput, 99.9% uptime, 80% cache hit rate. Always measure and monitor. 📊"
-    }
+    },
+    gif: "https://miro.medium.com/v2/resize:fit:1400/1*UaJYVrKSAEXLLYvpppNeOg.gif"
   },
   {
     id: 3,
@@ -163,7 +188,8 @@ const articles: Article[] = [
         }
       ],
       conclusion: "Cloud-native done right: 40% cost reduction, 99.99% availability, 60% better resource usage. Monitor and optimize continuously. 💰"
-    }
+    },
+    gif: "https://miro.medium.com/v2/resize:fit:1400/1*eFb3niqd7WK-B8PGeGMIaw.gif"
   },
   {
     id: 4,
@@ -209,7 +235,8 @@ const articles: Article[] = [
         }
       ],
       conclusion: "Choose the right communication: gRPC for internal, REST for external, Events for decoupling. Measure and monitor everything. 📊"
-    }
+    },
+    gif: "https://miro.medium.com/v2/resize:fit:1400/1*CAw1QQas8IxuQhwXZLOrKQ.gif"
   },
   {
     id: 5,
@@ -255,7 +282,8 @@ const articles: Article[] = [
         }
       ],
       conclusion: "Focus on data: 100x faster queries, 80% load reduction, 99.99% availability. Always measure performance impact. 📈"
-    }
+    },
+    gif: "https://media.giphy.com/media/vISmwpBJUNYzukTnVx/giphy.gif"
   },
   {
     id: 6,
@@ -301,15 +329,32 @@ const articles: Article[] = [
         }
       ],
       conclusion: "Automate everything: 10-minute pipelines, zero-downtime deployments, 95% issue detection. Monitor and improve continuously. 🔄"
-    }
+    },
+    gif: "https://miro.medium.com/v2/resize:fit:2000/0*UY4q3UdWxNNZHARX.gif"
   }
 ];
 
 export default function Articles() {
   const [selectedArticle, setSelectedArticle] = useState<Article | null>(null);
 
+  const scrollToNext = () => {
+    const container = document.querySelector('.articles-container');
+    if (container) {
+      const scrollAmount = container.clientWidth;
+      container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+    }
+  };
+
+  const scrollToPrevious = () => {
+    const container = document.querySelector('.articles-container');
+    if (container) {
+      const scrollAmount = container.clientWidth;
+      container.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+    }
+  };
+
   return (
-    <section id="articles" className="py-8">
+    <section id="articles" className="py-8 relative">
       <div className="container px-4 mx-auto">
         <div className="text-center mb-8">
           <motion.h2
@@ -322,36 +367,70 @@ export default function Articles() {
           </motion.h2>
         </div>
 
-        <div className="flex overflow-x-auto gap-6 pb-4 snap-x snap-mandatory hide-scrollbar">
+        <div className="absolute left-4 right-4 top-1/2 -translate-y-1/2 flex justify-between pointer-events-none z-10">
+          <button
+            onClick={scrollToPrevious}
+            className="w-12 h-12 rounded-full bg-white shadow-lg flex items-center justify-center pointer-events-auto hover:bg-gray-50 transition-colors"
+          >
+            <svg className="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+            </svg>
+          </button>
+          <button
+            onClick={scrollToNext}
+            className="w-12 h-12 rounded-full bg-white shadow-lg flex items-center justify-center pointer-events-auto hover:bg-gray-50 transition-colors"
+          >
+            <svg className="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            </svg>
+          </button>
+        </div>
+
+        <div className="articles-container flex overflow-x-auto gap-6 pb-4 snap-x snap-mandatory hide-scrollbar">
           {articles.map((article, index) => (
             <motion.div
               key={article.id}
-              className="flex-shrink-0 w-[300px] snap-start cursor-pointer border rounded-lg p-6 hover:border-gray-400 transition-colors bg-white"
+              className="flex-shrink-0 w-[600px] snap-start cursor-pointer rounded-xl overflow-hidden relative group hover:ring-2 hover:ring-blue-500 transition-all"
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
               onClick={() => setSelectedArticle(article)}
             >
-              <div className="flex flex-col h-full">
-                <div className="flex justify-between items-start mb-3">
-                  <h3 className="text-lg font-bold text-gray-900">
+              <div className="aspect-[16/9] relative">
+                {article.gif && (
+                  <img
+                    src={article.gif}
+                    alt={`${article.title} visualization`}
+                    className="w-full h-full object-cover"
+                  />
+                )}
+                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent" />
+              </div>
+
+              <div className="absolute inset-x-0 bottom-0 p-6 space-y-4">
+                <span className="inline-block px-3 py-1 rounded-full text-sm font-semibold bg-white/90 text-gray-800 shadow-sm">
+                  {article.category}
+                </span>
+
+                <div className="space-y-2">
+                  <h3 className="text-2xl font-bold text-white text-shadow-lg">
                     {article.title}
                   </h3>
-                  <span className="px-3 py-1 rounded-full text-xs font-medium border bg-gray-50 text-gray-600">
-                    {article.category}
-                  </span>
+                  <p className="text-lg text-white/90 line-clamp-2 text-shadow">
+                    {article.summary}
+                  </p>
                 </div>
-                <p className="text-sm mb-4 flex-grow line-clamp-2 text-gray-600">{article.summary}</p>
-                <div className="flex items-center justify-between text-xs mt-auto pt-4 border-t text-gray-500">
-                  <span className="flex items-center gap-2">
-                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+
+                <div className="flex items-center gap-4 text-white/80 text-shadow">
+                  <span className="flex items-center gap-2 text-base">
+                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
                     {article.readTime}
                   </span>
-                  <span className="flex items-center gap-2">
-                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <span className="flex items-center gap-2 text-base">
+                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                     </svg>
                     {new Date(article.date).toLocaleDateString('en-US', {
@@ -361,6 +440,8 @@ export default function Articles() {
                   </span>
                 </div>
               </div>
+
+              <div className="absolute inset-0 bg-blue-500/10 opacity-0 group-hover:opacity-100 transition-opacity" />
             </motion.div>
           ))}
         </div>
@@ -372,6 +453,12 @@ export default function Articles() {
           }
           .hide-scrollbar::-webkit-scrollbar {
             display: none;
+          }
+          .text-shadow {
+            text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+          }
+          .text-shadow-lg {
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
           }
         `}</style>
 
@@ -408,7 +495,18 @@ export default function Articles() {
                   </button>
                 </div>
                 <div className="p-8">
-                  <p className="text-lg mb-8 leading-relaxed text-gray-600">{selectedArticle.content.introduction}</p>
+                  {selectedArticle.gif && (
+                    <div className="mb-8 rounded-lg overflow-hidden aspect-video relative">
+                      <img
+                        src={selectedArticle.gif}
+                        alt={`${selectedArticle.title} visualization`}
+                        className="absolute inset-0 w-full h-full object-contain bg-gray-50"
+                      />
+                    </div>
+                  )}
+                  <p className="text-lg mb-8 leading-relaxed text-gray-600">
+                    {selectedArticle.content.introduction}
+                  </p>
                   {selectedArticle.content.sections.map((section, index) => (
                     <div key={index} className="mb-12">
                       <h4 className="text-2xl font-bold mb-6 text-gray-900">{section.title}</h4>
