@@ -591,37 +591,37 @@ export default function Articles() {
           </motion.h2>
         </div>
 
-        <div className="absolute left-4 right-4 top-1/2 -translate-y-1/2 flex justify-between pointer-events-none z-10">
+        <div className="absolute left-2 sm:left-4 right-2 sm:right-4 top-1/2 -translate-y-1/2 flex justify-between pointer-events-none z-10">
           <button
             onClick={scrollToPrevious}
-            className="w-12 h-12 rounded-full bg-white shadow-lg flex items-center justify-center pointer-events-auto hover:bg-gray-50 transition-colors"
+            className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white shadow-lg flex items-center justify-center pointer-events-auto hover:bg-gray-50 transition-colors"
           >
-            <svg className="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="w-5 h-5 sm:w-6 sm:h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
             </svg>
           </button>
           <button
             onClick={scrollToNext}
-            className="w-12 h-12 rounded-full bg-white shadow-lg flex items-center justify-center pointer-events-auto hover:bg-gray-50 transition-colors"
+            className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white shadow-lg flex items-center justify-center pointer-events-auto hover:bg-gray-50 transition-colors"
           >
-            <svg className="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="w-5 h-5 sm:w-6 sm:h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
             </svg>
           </button>
         </div>
 
-        <div className="articles-container flex overflow-x-auto gap-6 pb-4 snap-x snap-mandatory hide-scrollbar">
+        <div className="articles-container flex overflow-x-auto gap-3 sm:gap-6 pb-4 snap-x snap-mandatory hide-scrollbar">
           {articles.map((article, index) => (
             <motion.div
               key={article.id}
-              className="flex-shrink-0 w-[600px] snap-start cursor-pointer rounded-xl overflow-hidden relative group hover:ring-2 hover:ring-blue-500 transition-all"
+              className="flex-shrink-0 w-[280px] sm:w-[600px] snap-start cursor-pointer rounded-xl overflow-hidden relative group hover:ring-2 hover:ring-blue-500 transition-all"
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
               onClick={() => setSelectedArticle(article)}
             >
-              <div className="aspect-[16/9] relative">
+              <div className="aspect-[4/3] sm:aspect-[16/9] relative">
                 {article.gif && (
                   <img
                     src={article.gif}
@@ -629,32 +629,32 @@ export default function Articles() {
                     className="w-full h-full object-cover"
                   />
                 )}
-                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent" />
               </div>
 
-              <div className="absolute inset-x-0 bottom-0 p-6 space-y-4">
-                <span className="inline-block px-3 py-1 rounded-full text-sm font-semibold bg-white/90 text-gray-800 shadow-sm">
+              <div className="absolute inset-x-0 bottom-0 p-3 sm:p-6 space-y-2 sm:space-y-4">
+                <span className="inline-block px-2 py-0.5 sm:px-3 sm:py-1 rounded-full text-xs sm:text-sm font-semibold bg-white/90 text-gray-800 shadow-sm">
                   {article.category}
                 </span>
 
-                <div className="space-y-2">
-                  <h3 className="text-2xl font-bold text-white text-shadow-lg">
+                <div className="space-y-1 sm:space-y-2">
+                  <h3 className="text-lg sm:text-2xl font-bold text-white text-shadow-lg line-clamp-2 leading-tight">
                     {article.title}
                   </h3>
-                  <p className="text-lg text-white/90 line-clamp-2 text-shadow">
+                  <p className="text-sm sm:text-lg text-white/90 line-clamp-2 text-shadow leading-snug">
                     {article.summary}
                   </p>
                 </div>
 
-                <div className="flex items-center gap-4 text-white/80 text-shadow">
-                  <span className="flex items-center gap-2 text-base">
-                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="flex items-center gap-2 sm:gap-4 text-white/80 text-shadow">
+                  <span className="flex items-center gap-1 sm:gap-2 text-xs sm:text-base">
+                    <svg className="w-3.5 h-3.5 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
                     {article.readTime}
                   </span>
-                  <span className="flex items-center gap-2 text-base">
-                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <span className="flex items-center gap-1 sm:gap-2 text-xs sm:text-base">
+                    <svg className="w-3.5 h-3.5 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                     </svg>
                     {new Date(article.date).toLocaleDateString('en-US', {
