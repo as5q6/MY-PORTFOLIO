@@ -31,24 +31,39 @@ const skills = {
   ]
 };
 
-const experience = [
+const experiences = [
   {
-    company: "Ameren",
-    role: "Senior Software Engineer",
-    period: "2023 - Present",
-    tech: ["React", "Node.js", "AWS"]
+    title: "Senior Full Stack Developer",
+    company: "Enterprise Solutions Inc.",
+    date: "2022 - Present",
+    description: [
+      "Led development of microservices architecture using Spring Boot and Django REST framework",
+      "Optimized database performance across PostgreSQL and MongoDB deployments",
+      "Implemented CI/CD pipelines for hybrid Java/Python applications",
+      "Reduced API response times by 60% through caching and optimization"
+    ]
   },
   {
-    company: "Deutsche Bank",
-    role: "Software Engineer",
-    period: "2020 - 2022",
-    tech: ["Angular", "Spring Boot", "Azure"]
+    title: "Backend Developer",
+    company: "Tech Innovations Ltd",
+    date: "2020 - 2022",
+    description: [
+      "Developed scalable APIs using Django and Spring Boot microservices",
+      "Implemented real-time data processing with Kafka and Celery",
+      "Created automated testing suites for Python and Java codebases",
+      "Improved system reliability with comprehensive monitoring solutions"
+    ]
   },
   {
-    company: "Synechron & Boehringer",
-    role: "Software Engineer",
-    period: "2019 - 2023",
-    tech: ["React", "Node.js", "MongoDB"]
+    title: "Full Stack Developer",
+    company: "Digital Solutions Corp",
+    date: "2018 - 2020",
+    description: [
+      "Built and maintained enterprise applications using Spring Boot and Django",
+      "Designed RESTful APIs serving 1M+ daily requests",
+      "Implemented authentication systems using OAuth2 and JWT",
+      "Optimized application performance and reduced loading times by 40%"
+    ]
   }
 ];
 
@@ -73,20 +88,20 @@ export default function Experience() {
 
         {/* Experience Timeline */}
         <div className="grid md:grid-cols-3 gap-6 mb-16">
-          {experience.map((job, index) => (
+          {experiences.map((experience, index) => (
             <motion.div
-              key={job.company}
+              key={experience.company}
               className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
             >
-              <div className="text-sm font-medium text-blue-600 mb-2">{job.period}</div>
-              <h3 className="text-xl font-bold text-gray-900 mb-1">{job.role}</h3>
-              <p className="text-gray-700 mb-3">{job.company}</p>
-              <div className="flex flex-wrap gap-2">
-                {job.tech.map((tech) => (
+              <div className="text-sm font-medium text-blue-600 mb-2">{experience.date}</div>
+              <h3 className="text-xl font-bold text-gray-900 mb-1">{experience.title}</h3>
+              <p className="text-gray-700 mb-3">{experience.company}</p>
+              {/* <div className="flex flex-wrap gap-2">
+                {experience.tech.map((tech) => (
                   <span
                     key={tech}
                     className="px-2 py-1 bg-blue-50 text-blue-700 rounded-md text-sm"
@@ -94,7 +109,7 @@ export default function Experience() {
                     {tech}
                   </span>
                 ))}
-              </div>
+              </div> */}
             </motion.div>
           ))}
         </div>

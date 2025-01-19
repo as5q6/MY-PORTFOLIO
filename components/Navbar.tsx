@@ -12,6 +12,14 @@ export default function Navbar() {
         setIsOpen(!isOpen);
     };
 
+    const navigation = [
+        { name: 'About', href: '#about' },
+        { name: 'Experience', href: '#experience' },
+        { name: 'Technical Articles', href: '#articles' },
+        { name: 'Projects', href: '#projects' },
+        { name: 'Contact', href: '#contact' }
+    ];
+
     return (
         <>
             <nav className="nav-container">
