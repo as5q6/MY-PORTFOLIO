@@ -44,7 +44,7 @@ const experiences = [
     ]
   },
   {
-    title: "Backend Developer",
+    title: "Software Engineer",
     company: "Tech Innovations Ltd",
     date: "2020 - 2022",
     description: [
@@ -55,7 +55,7 @@ const experiences = [
     ]
   },
   {
-    title: "Full Stack Developer",
+    title: "Software Developer",
     company: "Digital Solutions Corp",
     date: "2018 - 2020",
     description: [
