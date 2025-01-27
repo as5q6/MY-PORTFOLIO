@@ -27,10 +27,11 @@ export default function Profile() {
             </div>
 
             <p className="text-gray-600 text-lg max-w-xl">
-              Java Spring sorcerer and GCP and AWS cloud whisperer, crafting enterprise magic with measurable impact.
-              Tamed wild microservices with Kubernetes, slashed API response times by 50% using Spring Cache,
-              and orchestrated CI/CD symphonies with Jenkins & GitHub Actions. When not wrestling with YAML,
-              I'm optimizing JVM performance and making containers play nicely together.
+              Passionate software architect crafting elegant solutions with Java Spring and cloud technologies.
+              Transforming complex challenges into efficient systems through microservices architecture and
+              cloud-native solutions on GCP and AWS. Proven track record of optimizing performance, with
+              achievements like 50% faster API responses and streamlined CI/CD pipelines. Always exploring
+              new ways to create robust, scalable applications while maintaining code quality and system reliability.
             </p>
 
             <div className="flex justify-center md:justify-start">
