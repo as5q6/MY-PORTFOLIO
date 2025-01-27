@@ -34,7 +34,7 @@ const skills = {
 const experiences = [
   {
     title: "Senior Full Stack Developer",
-    company: "Enterprise Solutions Inc.",
+    company: "Amren",
     date: "2022 - Present",
     description: [
       "Led development of microservices architecture using Spring Boot and Django REST framework",
@@ -45,7 +45,7 @@ const experiences = [
   },
   {
     title: "Software Engineer",
-    company: "Tech Innovations Ltd",
+    company: "Synechron",
     date: "2020 - 2022",
     description: [
       "Developed scalable APIs using Django and Spring Boot microservices",
@@ -56,7 +56,7 @@ const experiences = [
   },
   {
     title: "Software Developer",
-    company: "Digital Solutions Corp",
+    company: "Deutsche Bank & Boehringer Ingelheim",
     date: "2018 - 2020",
     description: [
       "Built and maintained enterprise applications using Spring Boot and Django",
