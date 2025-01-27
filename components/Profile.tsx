@@ -22,14 +22,15 @@ export default function Profile() {
                 Shaik Afrid Ali
               </h1>
               <p className="text-2xl text-gray-600 mt-4">
-                Senior Software Developer
+                Senior Software Engineer
               </p>
             </div>
 
             <p className="text-gray-600 text-lg max-w-xl">
-              Full-stack architect driving enterprise solutions with measurable impact. Optimized trading
-              platforms reducing latency by 45%, modernized energy infrastructure serving 2.4M+ customers,
-              and scaled cloud systems handling 1M+ daily transactions. Expertise in modern tech stack.
+              Java Spring sorcerer and GCP and AWS cloud whisperer, crafting enterprise magic with measurable impact.
+              Tamed wild microservices with Kubernetes, slashed API response times by 50% using Spring Cache,
+              and orchestrated CI/CD symphonies with Jenkins & GitHub Actions. When not wrestling with YAML,
+              I'm optimizing JVM performance and making containers play nicely together.
             </p>
 
             <div className="flex justify-center md:justify-start">

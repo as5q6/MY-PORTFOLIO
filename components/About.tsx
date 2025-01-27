@@ -17,7 +17,7 @@ export default function About() {
           <h2 className="text-3xl font-bold mb-6">About Me</h2>
           <p className="text-lg text-gray-600 leading-relaxed mb-6">
             Full-stack developer with a passion for building scalable applications using modern technologies.
-            Specialized in enterprise solutions using Java Spring Boot and Python Django, with a focus on
+            Specialized in enterprise solutions using Java Spring Boot  with a focus on
             creating robust microservices and high-performance web applications. Experienced in both
             traditional enterprise environments and modern cloud-native architectures.
           </p>
