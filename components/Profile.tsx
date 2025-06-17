@@ -83,7 +83,7 @@ export default function Profile() {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            <div className="relative w-[280px] h-[280px] md:w-[400px] md:h-[400px] mx-auto">
+            <div className="relative w-[300px] h-[300px] md:w-[450px] md:h-[450px] mx-auto">
               <Image
                 src="/assets/profile-pic.png"
                 alt="Shaik Afrid Ali profile"
