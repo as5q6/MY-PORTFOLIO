@@ -2,7 +2,7 @@ export const links = {
     // Social Links
     social: {
         github: "https://github.com/AfridShaik",
-        linkedin: "https://www.linkedin.com/in/afridalishaik",
+        linkedin: "https://www.linkedin.com/in/javadeveloperafrid/",
         email: "mailto:afridshk33@gmail.com",
     },
 

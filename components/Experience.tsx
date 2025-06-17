@@ -14,7 +14,6 @@ const skills = {
     { name: "MongoDB", level: "Advanced", icon: "🗄️" },
     { name: "PostgreSQL", level: "Advanced", icon: "🐘" },
     { name: "Python", level: "Advanced", icon: "🐍" },
-    { name: "Flask", level: "Advanced", icon: "🌶️" },
     { name: "Django", level: "Advanced", icon: "🎯" },
     { name: "Docker", level: "Advanced", icon: "🐋" },
     { name: "Kubernetes", level: "Advanced", icon: "⚓" },
@@ -33,38 +32,20 @@ const skills = {
 
 const experiences = [
   {
-    title: "Senior Full Stack Developer",
-    company: "Amren",
-    date: "2022 - Present",
-    description: [
-      "Led development of microservices architecture using Spring Boot and Django REST framework",
-      "Optimized database performance across PostgreSQL and MongoDB deployments",
-      "Implemented CI/CD pipelines for hybrid Java/Python applications",
-      "Reduced API response times by 60% through caching and optimization"
-    ]
+    title: "Senior Software Engineer",
+    company: "Clover Health | Jersey City, NJ",
+    date: "Mar 2023 - Present",
+  },
+  {
+    title: "Senior Software Engineer",
+    company: "PNC Bank | Cleveland, OH",
+    date: "Dec 2020 – Feb 2023",
   },
   {
     title: "Software Engineer",
-    company: "Synechron",
-    date: "2020 - 2022",
-    description: [
-      "Developed scalable APIs using Django and Spring Boot microservices",
-      "Implemented real-time data processing with Kafka and Celery",
-      "Created automated testing suites for Python and Java codebases",
-      "Improved system reliability with comprehensive monitoring solutions"
-    ]
+    company: "Walmart & Magna Infotech",
+    date: "Jan 2019 – Jun 2014",
   },
-  {
-    title: "Software Developer",
-    company: "Deutsche Bank & Boehringer Ingelheim",
-    date: "2018 - 2020",
-    description: [
-      "Built and maintained enterprise applications using Spring Boot and Django",
-      "Designed RESTful APIs serving 1M+ daily requests",
-      "Implemented authentication systems using OAuth2 and JWT",
-      "Optimized application performance and reduced loading times by 40%"
-    ]
-  }
 ];
 
 export default function Experience() {
@@ -82,7 +63,7 @@ export default function Experience() {
             Experience & Skills
           </h2>
           <p className="text-gray-600 text-lg">
-            5+ years of expertise in full-stack development
+            10+ years of expertise in full-stack development
           </p>
         </motion.div>
 

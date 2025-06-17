@@ -18,15 +18,15 @@ export default function Contact() {
 
     try {
       await emailjs.send(
-        'service_3dd4jb3', // Replace with your EmailJS service ID
-        'template_1qx24tj', // Replace with your EmailJS template ID
+        'service_gfyh6vb', // Replace with your EmailJS service ID
+        'template_u4pgz1o', // Replace with your EmailJS template ID
         {
           from_name: formData.name,
           from_email: formData.email,
           message: formData.message,
           to_name: 'Your Name', // Replace with your name
         },
-        'QR6tBx3dp1Q1gAiSr' // Replace with your EmailJS public key
+        'MBgQqhuLs7pjJHlYL' // Replace with your EmailJS public key
       );
 
       setStatus('success');
