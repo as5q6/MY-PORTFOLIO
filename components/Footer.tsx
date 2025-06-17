@@ -14,7 +14,7 @@ export default function Footer() {
                   href="mailto:afridshk33@gmail.com"
                   className="text-gray-600 hover:text-gray-900 transition-colors"
                 >
-                  afridshk33@gmail.com
+                  afridalidev@gmail.com
                 </a>
               </li>
               <li>
