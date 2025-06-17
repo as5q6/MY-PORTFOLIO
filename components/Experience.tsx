@@ -8,25 +8,39 @@ const skills = {
     { name: "Angular", level: "Expert", icon: "🅰️" },
     { name: "Node.js", level: "Expert", icon: "📦" },
     { name: "TypeScript", level: "Expert", icon: "🔷" },
-    { name: "Spring Boot", level: "Advanced", icon: "🍃" },
-    { name: "AWS", level: "Advanced", icon: "☁️" },
+    { name: "Spring Boot", level: "Expert", icon: "🍃" },
+    { name: "AWS", level: "Expert", icon: "☁️" },
     { name: "Azure", level: "Advanced", icon: "🌥️" },
     { name: "MongoDB", level: "Advanced", icon: "🗄️" },
     { name: "PostgreSQL", level: "Advanced", icon: "🐘" },
     { name: "Python", level: "Advanced", icon: "🐍" },
-    { name: "Django", level: "Advanced", icon: "🎯" },
     { name: "Docker", level: "Advanced", icon: "🐋" },
     { name: "Kubernetes", level: "Advanced", icon: "⚓" },
     { name: "Git", level: "Advanced", icon: "🔄" },
     { name: "CI/CD", level: "Advanced", icon: "⚙️" },
     { name: "Jenkins", level: "Advanced", icon: "🔧" },
     { name: "Github Actions", level: "Advanced", icon: "🔨" },
+    { name: "Agile/Scrum", level: "Advanced", icon: "📅" },
+    { name: "Microservices", level: "Advanced", icon: "🔗" },
+    { name: "RESTful APIs", level: "Advanced", icon: "🌐" },
+    { name: "GraphQL", level: "Intermediate", icon: "📊" },
+    { name: "Redux", level: "Intermediate", icon: "🔄" },
+    { name: "Tailwind CSS", level: "Intermediate", icon: "🎨" },
+    { name: "Material UI", level: "Intermediate", icon: "📦" },
+    { name: "Bootstrap", level: "Intermediate", icon: "🧰" },
+    
 
   ],
   domains: [
     { name: "Banking & Finance", icon: "💰", years: "3+" },
-    { name: "Energy Sector", icon: "⚡", years: "1+" },
-    { name: "Healthcare", icon: "🏥", years: "2+" }
+    { name: "Healthcare", icon: "🏥", years: "2+" },
+    { name: "Retail", icon: "⚡", years: "2+" },
+    { name: "E-commerce", icon: "🛒", years: "2+" },
+    { name: "Telecommunications", icon: "📞", years: "1+" },
+    { name: "Logistics", icon: "🚚", years: "1+" },
+    { name: "Insurance", icon: "🛡️", years: "1+" },
+    { name: "Education", icon: "🎓", years: "1+" },
+
   ]
 };
 
@@ -46,6 +60,16 @@ const experiences = [
     company: "Walmart & Magna Infotech",
     date: "Jan 2019 – Jun 2014",
   },
+];
+
+const industries = [
+  { name: "Healthcare & Insurance", icon: "🏥 🛡️", description: "Healthcare Solutions" },
+  { name: "Banking & Finance", icon: "💰 ", description: "Financial Services" },
+  { name: "Payments & Fintech", icon: "💳", description: "Payment Systems" },
+  { name: "Retail & E-commerce", icon: "🛍️ 🛒", description: "Retail & E-commerce Platforms" },
+  { name: "Telecom & Media", icon: "📞 🎥", description: "Telecom & Media Services" },
+  { name: "Logistics & Education", icon: "🚚 🎓", description: "Logistics & Educational Platforms" },
+
 ];
 
 export default function Experience() {
@@ -121,18 +145,28 @@ export default function Experience() {
             {/* Domain Experience */}
             <div>
               <h3 className="text-xl font-bold text-gray-900 mb-6">Industry Experience</h3>
-              <div className="space-y-4">
-                {skills.domains.map((domain) => (
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {industries.map((industry, index) => (
                   <motion.div
-                    key={domain.name}
-                    className="flex items-center justify-between p-4 bg-gray-50 rounded-xl hover:bg-gray-100 transition-colors"
-                    whileHover={{ x: 5 }}
+                    key={industry.name}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: index * 0.1 }}
+                    className="group relative overflow-hidden rounded-2xl bg-white p-6 shadow-md hover:shadow-xl transition-all duration-300"
                   >
-                    <div className="flex items-center gap-3">
-                      <span className="text-2xl">{domain.icon}</span>
-                      <span className="text-gray-900 font-medium">{domain.name}</span>
+                    <div className="absolute inset-0 bg-gradient-to-br from-blue-50/50 to-gray-50/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                    <div className="relative z-10">
+                      <span className="text-5xl mb-4 block transform group-hover:scale-110 transition-transform duration-300">
+                        {industry.icon}
+                      </span>
+                      <h3 className="text-xl font-semibold text-gray-800 mt-4 mb-2">
+                        {industry.name}
+                      </h3>
+                      <p className="text-sm text-gray-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        {industry.description}
+                      </p>
                     </div>
-                    <span className="text-blue-600 font-medium">{domain.years} years</span>
                   </motion.div>
                 ))}
               </div>
@@ -142,4 +176,4 @@ export default function Experience() {
       </div>
     </section>
   );
-} 
+}
