@@ -51,13 +51,6 @@ export default function Profile() {
                 whileHover={{ scale: 1.1 }}
                 className="text-gray-600 hover:text-gray-900 transition-colors"
               >
-                <Image
-                  src="/assets/github.png"
-                  alt="GitHub Profile"
-                  width={24}
-                  height={24}
-                  className="opacity-75 hover:opacity-100"
-                />
               </motion.a>
               <motion.a
                 href={links.social.linkedin}
