@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
+import { Analytics } from '@vercel/analytics/react';
 import "./globals.css";
 
 const poppins = Poppins({
@@ -28,7 +29,8 @@ export default function RootLayout({
           <div className="noise-overlay"></div>
         </div>
         {children}
+        <Analytics />
       </body>
     </html>
   );
-} 
+}
