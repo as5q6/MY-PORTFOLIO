@@ -36,7 +36,7 @@ const skillCategories = {
     "Cloud & DevOps": {
         icon: "☁️",
         skills: [
-            "AWS (s3, Lambda, Step Function, AMQ, SNS, SQS)", "CloudWatch Events",
+            "AWS (s3, Lambda, Step Function, AMQ, SNS, SQS)", "Azure (AKS, App Service, Functions, Blob Storage)", "CloudWatch Events",
             "EBS", "GCP", "DataBricks", "PCF", "Kubernetes", "Azure",
             "Jenkins", "Ansible/Chef/Puppet/Spinnaker", "Atlassian Tool suite",
             "EC2", "ECS", "codepipeline", "cloudformation"
@@ -104,4 +104,4 @@ export default function SkillsSection() {
             </div>
         </div>
     );
-} 
+}

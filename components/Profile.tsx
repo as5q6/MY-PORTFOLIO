@@ -29,7 +29,7 @@ export default function Profile() {
             <p className="text-gray-600 text-lg max-w-xl">
               Passionate software architect crafting elegant solutions with Java Spring and cloud technologies.
               Transforming complex challenges into efficient systems through microservices architecture and
-              cloud-native solutions on GCP and AWS. Proven track record of optimizing performance, with
+              cloud-native solutions on GCP, AWS, and Azure. Proven track record of optimizing performance, with
               achievements like 50% faster API responses and streamlined CI/CD pipelines. Always exploring
               new ways to create robust, scalable applications while maintaining code quality and system reliability.
             </p>
@@ -90,4 +90,4 @@ export default function Profile() {
       </div>
     </section>
   );
-} 
+}

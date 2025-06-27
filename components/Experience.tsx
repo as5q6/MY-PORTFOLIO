@@ -11,6 +11,7 @@ const skills = {
     { name: "Spring Boot", level: "Expert", icon: "🍃" },
     { name: "AWS", level: "Expert", icon: "☁️" },
     { name: "Azure", level: "Advanced", icon: "🌥️" },
+    { name: "GCP", level: "Advanced", icon: "🌏" },
     { name: "MongoDB", level: "Advanced", icon: "🗄️" },
     { name: "PostgreSQL", level: "Advanced", icon: "🐘" },
     { name: "Python", level: "Advanced", icon: "🐍" },

@@ -497,35 +497,35 @@ const articles: Article[] = [
 
   {
     id: 3,
-    title: "Cloud-Native Java Applications ☁️",
+    title: "Cloud-Native Java Applications \u2601\ufe0f",
     summary: "AWS, Azure, and GCP deployment strategies for Java apps",
     readTime: "14 min read",
     date: "2024-02-01",
     category: "Cloud",
     content: {
-      introduction: "Practical guide to deploying Java applications in the cloud. Real configurations, real scaling strategies, real cost optimization. 🚀",
+      introduction: "Practical guide to deploying Java applications in the cloud. Real configurations, real scaling strategies, real cost optimization. Covers AWS, Azure, and GCP. \ud83d\ude80",
       sections: [
         {
-          title: "Cloud Deployment Patterns 🌩️",
-          content: `• AWS Deployment 🔧
+          title: "Cloud Deployment Patterns \ud83c\udf29\ufe0f",
+          content: `\u2022 AWS Deployment \ud83d\udd27
     - ECS Fargate: 0.25 vCPU, 512MB per task
     - Auto-scaling: Target tracking at 75% CPU
     - ALB: Path-based routing with SSL
     - Cost: $0.02 per task hour optimized
 
-• Azure Configuration ⚡
+\u2022 Azure Configuration \u26a1
     - AKS: B2s instances (2 vCPU, 4GB)
     - VMSS: Scale at 70% CPU utilization
     - Application Gateway: WAF enabled
     - Managed identities for security
 
-• GCP Setup 🛠️
+\u2022 GCP Setup \ud83d\udee0\ufe0f
     - GKE Autopilot: Auto-provisioned nodes
     - Cloud Run: Serverless deployments
     - Load balancing: Global HTTPS LB
     - Cloud Armor: DDoS protection
 
-• Monitoring & Logging 📊
+\u2022 Monitoring & Logging \ud83d\udcca
     - CloudWatch/App Insights metrics
     - Distributed tracing with X-Ray/Jaeger
     - Log aggregation: 7-day retention
@@ -538,7 +538,7 @@ const articles: Article[] = [
           ]
         }
       ],
-      conclusion: "Cloud-native done right: 40% cost reduction, 99.99% availability, 60% better resource usage. Monitor and optimize continuously. 💰"
+      conclusion: "Cloud-native done right: 40% cost reduction, 99.99% availability, 60% better resource usage. Monitor and optimize continuously. \ud83d\udcb0"
     },
     gif: "https://miro.medium.com/v2/resize:fit:1400/1*eFb3niqd7WK-B8PGeGMIaw.gif"
   },
