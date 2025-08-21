@@ -10,8 +10,8 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Shaik Afrid Ali - Portfolio",
-  description: "Software Developer Portfolio",
+  title: "Website Under Maintenance - Shaik Afrid Ali",
+  description: "Website temporarily unavailable for maintenance and updates",
 };
 
 export default function RootLayout({
