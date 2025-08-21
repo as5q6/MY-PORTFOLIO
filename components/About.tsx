@@ -1,8 +1,6 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { DotLottiePlayer } from '@dotlottie/react-player';
-import { links } from '@/config/links';
 
 export default function About() {
   return (

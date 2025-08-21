@@ -51,7 +51,7 @@ export default function Home() {
           transition={{ delay: 0.4 }}
           className="text-xl md:text-2xl text-gray-300 mb-8"
         >
-          We're currently performing maintenance and updates to improve your experience.
+          We&apos;re currently performing maintenance and updates to improve your experience.
         </motion.p>
 
         {/* Status Info */}
